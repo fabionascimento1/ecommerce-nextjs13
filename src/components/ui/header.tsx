@@ -20,7 +20,7 @@ const Header = () => {
   const { status, data } = useSession();
 
   const handleLoginClick = async () => {
-    await signIn();
+    await signIn("goolge");
   };
 
   const handleLogoutClick = async () => {
@@ -61,6 +61,7 @@ const Header = () => {
             {status === "unauthenticated" && (
               <Button
                 onClick={handleLoginClick}
+                /* onClick={() => signIn("google")} */
                 variant="outline"
                 className="w-full justify-start gap-2"
               >
